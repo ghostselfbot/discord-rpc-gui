@@ -1,16 +1,63 @@
 {
   "name": "discord-rpc-gui",
   "version": "1.0.0",
-  "description": "",
+  "description": "Graphical user interface designed in Electron to allow full customisation of Discord's Rich Presence",
   "main": "app/main/main.js",
+  "build": {
+    "appId": "fun.benny.discord-rpc-gui",
+    "productName": "Discord RPC GUI",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "app/**/*",
+      "node_modules/**/*"
+    ],
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        {
+          "target": "zip",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "msi",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron app/main/main.js"
+    "start": "electron app/main/main.js",
+    "dist": "electron-builder"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "discord-rpc": "^4.0.1",
-    "electron": "^33.3.1"
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "electron": "^33.3.1",
+    "electron-builder": "^25.1.8"
   }
 }

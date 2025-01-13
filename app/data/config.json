@@ -1,0 +1,18 @@
+{
+  "client_id": "",
+  "presence": {
+    "details": "",
+    "state": "",
+    "images": {
+      "large": {
+        "key": "",
+        "text": ""
+      },
+      "small": {
+        "key": "",
+        "text": ""
+      }
+    },
+    "buttons": []
+  }
+}

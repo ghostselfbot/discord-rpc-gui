@@ -1,0 +1,16 @@
+{
+  "name": "discord-rpc-gui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/main/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron app/main/main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord-rpc": "^4.0.1",
+    "electron": "^33.3.1"
+  }
+}
